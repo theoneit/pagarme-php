@@ -80,6 +80,7 @@ class Client
      */
     private function buildRequest($apiRequest)
     {
+        /*
         if (class_exists('\\GuzzleHttp\\Psr7\\Request')) {
             return new \GuzzleHttp\Psr7\Request(
                 $apiRequest->getMethod(),
@@ -88,7 +89,7 @@ class Client
                 json_encode($this->buildBody($apiRequest))
             );
         }
-
+        */
         if (class_exists('\\GuzzleHttp\\Message\\Request')
             && method_exists($this->client, 'createRequest')
         ) {
